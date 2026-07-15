@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Numa — Clean air for your underground commute</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" rx="20" fill="#0e6a74"/>
+    <ellipse cx="50" cy="34" rx="15" ry="6" fill="#7fe3ec"/>
+    <rect x="35" y="34" width="30" height="40" rx="15" fill="#e7c9a8"/>
+  </svg>
+</template>
+
+<!-- ============== NAV ============== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top"><span class="brand-mark"></span><span data-brand>Numa</span></a>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#device">The device</a>
+      <a href="#tiers">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#science">Science</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#preorder" data-cta>Pre-order</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ============== HERO ============== -->
+<section class="hero wrap" data-screen-label="Hero">
+  <div class="hero-center reveal">
+    <p class="eyebrow">Personal respiratory protection</p>
+    <h1 class="display" data-headline>The air down here isn't clean.<br><span class="accentword">Now you don't have to breathe it.</span></h1>
+    <p class="lede"><span data-brand>Numa</span> is a discreet nasal device that filters the air you breathe on your commute. Built first for people with <b>asthma and allergies</b> — and for anyone who'd rather not inhale the subway. No mask, no effort. Like earbuds, for your nose.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#preorder"><span data-cta>Pre-order</span> — it's free <span class="arrow">→</span></a>
+      <a class="btn btn-ghost" href="#how">See how it works</a>
+    </div>
+  </div>
+
+  <div class="hero-stage reveal">
+    <div class="dissect dissect--hero">
+        <div class="dissect-stage" id="dissectStage" title="Click or drag to dissect">
+          <div class="dstack" id="dstack">
+            <div class="dlayer" data-i="0"><div class="disc-face f-cap"></div><div class="dlabel"><span class="dl-tag shell">Shell</span><span class="dl-name">Retrieval cap</span></div></div>
+            <div class="dlayer" data-i="1"><div class="disc-face f-housing"></div><div class="dlabel"><span class="dl-tag shell">Shell</span><span class="dl-name">Outer housing</span></div></div>
+            <div class="dlayer" data-i="2"><div class="disc-face f-mesh"></div><div class="dlabel"><span class="dl-tag filter">Filter</span><span class="dl-name">Mesh pre-filter</span></div></div>
+            <div class="dlayer" data-i="3"><div class="disc-face f-pm"></div><div class="dlabel"><span class="dl-tag filter">Filter</span><span class="dl-name">PM2.5 media</span></div></div>
+            <div class="dlayer" data-i="4"><div class="disc-face f-carbon"></div><div class="dlabel"><span class="dl-tag filter">Filter</span><span class="dl-name">Activated carbon</span></div></div>
+            <div class="dlayer" data-i="5"><div class="disc-face f-seal"></div><div class="dlabel"><span class="dl-tag shell">Shell</span><span class="dl-name">Nostril seal</span></div></div>
+          </div>
+          <div class="dissect-hint" id="dissectHint">◐ Click or drag to dissect</div>
+        </div>
+        <div class="dissect-controls">
+          <button class="dbtn" id="dissectToggle" type="button">Dissect</button>
+          <input type="range" id="dissectRange" min="0" max="100" value="0" aria-label="Dissect the device" />
+        </div>
+        <div class="dissect-readout" id="dissectReadout"><b>Assembled.</b> Drag to peel it apart, outside to inside.</div>
+      </div>
+
+    <div class="hero-meta">
+      <div><div class="k">FORM</div><div class="v">Discreet nasal insert</div></div>
+      <div><div class="k">EFFORT</div><div class="v">Breathe normally</div></div>
+      <div><div class="k">MODEL</div><div class="v">Replaceable filter kits</div></div>
+    </div>
+
+    <div class="trust-bar reveal">
+      <p>Grounded in peer-reviewed research — <b>NYU Langone</b> · <b>Imperial College London</b> · <b>WHO air-quality guidelines</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WHO IT'S FOR ============== -->
+<div class="aud-band">
+  <div class="aud-inner reveal">
+    <span class="al">Made for</span>
+    <span class="aud-chip"><b>Asthma</b></span>
+    <span class="aud-chip"><b>Allergies</b></span>
+    <span class="aud-chip">Daily commuters</span>
+    <span class="aud-chip">Parents-to-be</span>
+    <span class="aud-chip">Anyone underground</span>
+  </div>
+</div>
+
+<!-- ============== PROBLEM ============== -->
+<section class="deep section-pad" id="problem" data-screen-label="The problem">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="eyebrow">The invisible commute</p>
+      <h2 class="h2">When the train's headlights cut through the tunnel, you see it: a fog of suspended particles. You've been breathing it the whole time.</h2>
+      <p class="lede">Subway air is loaded with fine particulate matter — brake dust, rail wear, and debris — at levels that dwarf the air above ground. It's invisible, it's chronic, and right now most commuters just live with it.</p>
+    </div>
+
+    <div class="bars reveal" id="bars">
+      <div class="bar-row">
+        <div class="name">WHO 24-hour limit<small>safe exposure ceiling</small></div>
+        <div class="bar-track"><div class="bar-fill who" data-w="11"></div></div>
+        <div class="val"><b>15</b> <small>µg/m³</small></div>
+      </div>
+      <div class="bar-row">
+        <div class="name">On the train<small>NYC subway car, in transit</small></div>
+        <div class="bar-track"><div class="bar-fill train" data-w="71"></div></div>
+        <div class="val"><b>99</b> <small>µg/m³</small></div>
+      </div>
+      <div class="bar-row">
+        <div class="name">On the platform<small>NYC subway platform, waiting</small></div>
+        <div class="bar-track"><div class="bar-fill plat" data-w="100"></div></div>
+        <div class="val"><b>139</b> <small>µg/m³</small></div>
+      </div>
+    </div>
+
+    <div class="chem-note reveal">
+      <span class="dot"></span>
+      <p>This isn't ordinary city dust. Subway PM2.5 is <b>chemically distinct</b> — high in iron oxide from brake and rail wear, plus elemental carbon — raising concerns beyond standard particulate exposure. And transit ventilation is <b>"often inefficient"</b> at removing it, which is exactly why personal protection matters.</p>
+    </div>
+    <p class="cite reveal">Luglio et&nbsp;al., Environmental Health Perspectives 2021 (NYU Langone) · Env. Science: Processes &amp; Impacts, review of 130+ studies, 2021</p>
+
+    <div class="jtbd reveal">
+      <p class="jt-h">The job to be done — and why today's options fail</p>
+      <div class="jtbd-grid">
+        <div class="jt-card">
+          <div class="jw">Do nothing</div>
+          <div class="jx">The default for the vast majority of riders. The exposure is invisible, so it's easy to ignore — until years of it add up.</div>
+          <div class="jfail">No protection at all</div>
+        </div>
+        <div class="jt-card">
+          <div class="jw">Wear a mask</div>
+          <div class="jx">N95s work, but nobody wants to wear one daily post-COVID. Hot, conspicuous, uncomfortable for a 45-minute ride.</div>
+          <div class="jfail">Abandoned for comfort &amp; looks</div>
+        </div>
+        <div class="jt-card">
+          <div class="jw">Hold your breath</div>
+          <div class="jx">Dodging the worst of it on the platform, switching cars, taking shallow breaths. A coping reflex, not a solution.</div>
+          <div class="jfail">Doesn't actually work</div>
+        </div>
+      </div>
+      <p class="jt-foot">The job: <b>protect my lungs on the commute I take anyway — without a mask, without effort, without anyone noticing.</b> That's the gap Numa fills.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOW IT WORKS ============== -->
+<section class="section-pad wrap" id="how" data-screen-label="How it works">
+  <div class="shead reveal">
+    <p class="eyebrow">How it works</p>
+    <h2 class="h2">Designed to disappear.</h2>
+    <p class="lede">Masks fell out of favor for a reason — nobody wants to wear one every day. <span data-brand>Numa</span> sits inside the nose, out of sight, and does its work while you forget it's there.</p>
+  </div>
+
+  <div class="pillars reveal">
+    <div class="pillar">
+      <div class="n">01</div>
+      <h3 class="h3">Breathe naturally</h3>
+      <p>Engineered for low airflow resistance, so a 30–60 minute commute feels effortless — not like breathing through a straw.</p>
+    </div>
+    <div class="pillar">
+      <div class="n">02</div>
+      <h3 class="h3">Practically invisible</h3>
+      <p>A discreet in-nose insert, not a face mask. Socially weightless — wear it on a packed platform, nobody notices.</p>
+    </div>
+    <div class="pillar">
+      <div class="n">03</div>
+      <h3 class="h3">Layered protection</h3>
+      <p>Multiple filter layers capture coarse debris, fine PM2.5, and odor — then pop out and swap when spent.</p>
+    </div>
+  </div>
+
+  <div class="perf-band reveal">
+    <div class="pnum">95<small>%</small></div>
+    <div>
+      <div class="ptext">Engineered to capture up to <b>95% of PM2.5</b> — the fine iron-oxide and carbon particles that dominate subway air.</div>
+      <div class="pcaveat">Target performance · in development · independently lab-tested before launch</div>
+    </div>
+  </div>
+
+  <!-- exploded device: shell + filter -->
+  <div class="filter-explore">
+    <div class="explode-stage reveal" id="explodeStage">
+      <div class="discs" id="discs">
+        <div class="fdisc" data-layer="0" style="--disc-inner: linear-gradient(145deg, oklch(0.86 0.04 70), oklch(0.7 0.05 60));"></div>
+        <div class="fdisc" data-layer="1" style="--disc-inner: radial-gradient(circle, transparent 0 54%, oklch(0.82 0.045 65) 55% 100%);"></div>
+        <div class="fdisc" data-layer="2"><div class="ring-mesh"></div></div>
+        <div class="fdisc" data-layer="3" style="--disc-inner: radial-gradient(circle, oklch(0.9 0.08 200), oklch(0.78 0.1 205));"></div>
+        <div class="fdisc" data-layer="4" style="--disc-inner: radial-gradient(circle, oklch(0.42 0.02 250), oklch(0.3 0.015 250));"></div>
+        <div class="fdisc" data-layer="5" style="--disc-inner: radial-gradient(circle, oklch(0.9 0.035 68), oklch(0.78 0.05 58));"></div>
+      </div>
+    </div>
+
+    <div class="explode-info reveal">
+      <p class="mono-label">The whole device — tap a part</p>
+      <h3 class="h3" style="margin-top:12px;">Shell on the outside. A replaceable filter cartridge inside.</h3>
+      <div class="stack-legend">
+        <span><i class="ldot shell"></i> Shell — buy once, keep for life</span>
+        <span><i class="ldot filter"></i> Filter — pops out, swap when spent</span>
+      </div>
+      <div class="layer-pick" id="layerPick">
+        <button class="layer-btn active" data-layer="0">
+          <span class="swatch" style="background:linear-gradient(145deg,#dcbb95,#b3855d)"></span>
+          <span><span class="lt-row"><span class="lt">Retrieval bridge &amp; cap</span><span class="lbadge shell">Shell</span></span><span class="ld">A low-profile grip to insert and remove in a second — and so it never gets lost or inhaled.</span></span>
+          <span class="num">01</span>
+        </button>
+        <button class="layer-btn" data-layer="1">
+          <span class="swatch" style="background:radial-gradient(circle,#ecd4b6 40%,#bd9068 42%)"></span>
+          <span><span class="lt-row"><span class="lt">Outer shell housing</span><span class="lbadge shell">Shell</span></span><span class="ld">The rigid frame that holds everything and clicks the cartridge in. Yours for the life of the product.</span></span>
+          <span class="num">02</span>
+        </button>
+        <button class="layer-btn" data-layer="2">
+          <span class="swatch" style="background:repeating-linear-gradient(45deg,#9c8268 0 3px,#cdb89c 3px 6px)"></span>
+          <span><span class="lt-row"><span class="lt">Mesh pre-filter</span><span class="lbadge filter">Filter</span></span><span class="ld">Catches coarse debris and lint so the fine media lasts longer.</span></span>
+          <span class="num">03</span>
+        </button>
+        <button class="layer-btn" data-layer="3">
+          <span class="swatch" style="background:radial-gradient(circle,#7fdce6,#2aa6b4)"></span>
+          <span><span class="lt-row"><span class="lt">PM2.5 electrostatic media</span><span class="lbadge filter">Filter</span></span><span class="ld">The core layer — captures fine iron-oxide and carbon particles specific to subway air.</span></span>
+          <span class="num">04</span>
+        </button>
+        <button class="layer-btn" data-layer="4">
+          <span class="swatch" style="background:radial-gradient(circle,#5a6470,#2c333c)"></span>
+          <span><span class="lt-row"><span class="lt">Activated carbon</span><span class="lbadge filter">Filter</span></span><span class="ld">Adsorbs odors and volatile compounds so each breath stays fresh.</span></span>
+          <span class="num">05</span>
+        </button>
+        <button class="layer-btn" data-layer="5">
+          <span class="swatch" style="background:radial-gradient(circle,#f0d9c4,#d9b79a)"></span>
+          <span><span class="lt-row"><span class="lt">Soft nostril seal</span><span class="lbadge shell">Shell</span></span><span class="ld">Medical-grade silicone that conforms to your nostril — a gentle seal with no pressure points, sized S/M/L.</span></span>
+          <span class="num">06</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== DEVICE / BUILT FOR THE NOSE ============== -->
+<section class="section-pad" id="device" style="background:var(--bg-soft)" data-screen-label="The device">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="eyebrow">The product</p>
+      <h2 class="h2">Built for every nose. Worn like it isn't there.</h2>
+      <p class="lede">No two noses are alike — so the part that touches you is soft, sized, and engineered around the pressure points. Everything hard stays off your skin.</p>
+    </div>
+
+    <div class="device-anatomy">
+      <div class="da-col reveal">
+        <div class="da-feature">
+          <span class="dn">01 · SEAL</span>
+          <div class="dt">Soft silicone seal</div>
+          <div class="dd">A conforming flange holds a gentle seal against the nostril wall — comfortable past the 30–60 min most filters give up at.</div>
+        </div>
+        <div class="da-feature">
+          <span class="dn">02 · CARTRIDGE</span>
+          <div class="dt">Replaceable cartridge</div>
+          <div class="dd">The filter stack clicks in and out with a thumbnail. Spent media goes in seconds — the shell stays.</div>
+        </div>
+      </div>
+
+      <div class="da-stage reveal">
+        <div class="da-slot da-placeholder"><span>PRODUCT RENDER</span></div>
+      </div>
+
+      <div class="da-col right reveal">
+        <div class="da-feature">
+          <span class="dn">03 · AIRFLOW</span>
+          <div class="dt">Low-resistance airflow</div>
+          <div class="dd">A wide internal channel keeps breathing effort low — protection you don't have to fight against.</div>
+        </div>
+        <div class="da-feature">
+          <span class="dn">04 · BRIDGE</span>
+          <div class="dt">Retrieval bridge</div>
+          <div class="dd">A near-invisible, skin-tone bridge sits just inside the nose: easy to grab, impossible to lose.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="device-detail reveal">
+      <div class="dd-block">
+        <div class="dh-lab">Materials</div>
+        <h3 class="h3">Skin-safe where it counts. Built to last where it doesn't.</h3>
+        <div class="mat-list">
+          <div class="mat-item">
+            <span class="ms" style="background:radial-gradient(circle at 35% 30%,#f3ddc9,#d8b596)"></span>
+            <span><span class="mt">Medical-grade silicone seal</span><span class="mx">Soft (low-durometer), hypoallergenic, latex-free — the only part that touches you.</span></span>
+          </div>
+          <div class="mat-item">
+            <span class="ms" style="background:linear-gradient(145deg,#cfd6de,#9aa4b0)"></span>
+            <span><span class="mt">Anodized polymer core</span><span class="mx">A rigid, lightweight housing that holds the cartridge and survives a pocket or bag.</span></span>
+          </div>
+          <div class="mat-item">
+            <span class="ms" style="background:radial-gradient(circle,#e7d2bf,#cbb199)"></span>
+            <span><span class="mt">Skin-tone finishes</span><span class="mx">A small range of neutral tones so the device visually disappears against the skin.</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="dd-block">
+        <div class="dh-lab">Comfort engineering</div>
+        <h3 class="h3">Designed around where it touches — and where it doesn't.</h3>
+        <ul class="comfort-list">
+          <li><span class="ck"></span><span><b>No septum contact.</b> The sensitive center divider is left untouched.</span></li>
+          <li><span class="ck"></span><span><b>Even pressure</b> spread across the nostril wall — no single hot spot to ache.</span></li>
+          <li><span class="ck"></span><span><b>Vented for moisture</b> so a long commute doesn't dry you out.</span></li>
+          <li><span class="ck"></span><span><b>Stays seated</b> when you talk, sneeze, or hustle for the train.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fit-wrap reveal">
+      <div>
+        <div class="clabel">Find your fit</div>
+        <div class="seg" id="fit" role="tablist" style="margin-top:12px;">
+          <button data-fit="S">Small</button>
+          <button class="on" data-fit="M">Medium</button>
+          <button data-fit="L">Large</button>
+        </div>
+      </div>
+      <div class="fit-note" id="fitNote">
+        <b>Medium</b> fits the majority of adult noses — the right starting point if you're unsure.
+        <span class="fsub">EVERY DEVICE SHIPS WITH S / M / L SEALS · SWAP IN SECONDS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOW TO WEAR IT ============== -->
+<section class="section-pad wrap" id="wear" data-screen-label="How to wear it">
+  <div class="shead reveal">
+    <p class="eyebrow">Putting it on</p>
+    <h2 class="h2">In your nose in seconds. Out of sight all day.</h2>
+    <p class="lede">A gentle insert into each nostril and you're done — discreet, comfortable, and quietly filtering every breath. Here's the whole routine, and what it's doing while you wear it.</p>
+  </div>
+  <figure class="wear-figure reveal">
+    <img src="assets/how-to-wear.png" alt="Six-step guide to inserting the Numa nasal device into each nostril, plus a diagram comparing unfiltered breathing (dust and particles entering the nose) with filtered breathing through the device." loading="lazy" />
+  </figure>
+  <p class="wear-cap reveal">Fitting guide · both nostrils · the filter captures particles so you breathe cleaner air</p>
+</section>
+
+<!-- ============== FILTERS / SUBSCRIPTION ============== -->
+<section class="section-pad wrap" id="filters" data-screen-label="Filters &amp; subscription">
+  <div class="shead reveal">
+    <p class="eyebrow">Filters &amp; refills</p>
+    <h2 class="h2">One device. Fresh filters, forever.</h2>
+    <p class="lede">You buy the device once. The protection lives in the filter — and filters are spent media, like a water pitcher cartridge. Refill kits ship to your door on a cadence that matches how hard you commute.</p>
+  </div>
+
+  <div class="subs-grid">
+    <!-- configurator -->
+    <div class="config reveal" id="config">
+      <div class="field">
+        <div class="clabel">How often do you ride?</div>
+        <div class="seg" id="ride" role="tablist">
+          <button data-days="3">3 days/wk</button>
+          <button class="on" data-days="5">5 days/wk</button>
+          <button data-days="7">Every day</button>
+        </div>
+      </div>
+      <div class="field">
+        <div class="clabel">Round-trip minutes underground</div>
+        <div class="slider-wrap">
+          <input type="range" id="mins" min="20" max="120" step="5" value="60" />
+          <div class="slider-read">
+            <span class="big"><span id="minsVal">60</span> min</span>
+            <span class="sub">per commuting day</span>
+          </div>
+        </div>
+      </div>
+      <div class="config-out">
+        <div class="price-row">
+          <div class="pr">$<span id="price">18</span><small>/mo</small></div>
+          <div class="cadence"><b id="cadence">2 filters / month</b><span id="perfilter">auto-ships every 2 weeks</span></div>
+        </div>
+        <p class="fineprint">Estimated subscription based on a filter's effective capacity at your exposure. Pause, skip, or cancel anytime — and the device is yours to keep.</p>
+      </div>
+    </div>
+
+    <!-- filter life -->
+    <div class="life-card reveal">
+      <div>
+        <p class="eyebrow">Never guess</p>
+        <h3 class="h3">You'll always know when a filter is spent.</h3>
+        <p>A visible indicator tracks filter life against your real exposure — no math, no surprises. When it reads empty, the next kit is already on its way.</p>
+      </div>
+      <div class="life-visual">
+        <div class="ring" id="lifeRing" style="--p:64">
+          <div class="rv"><b id="lifeNum">64</b><small>% LIFE</small></div>
+        </div>
+        <div class="life-legend">
+          <b>Current filter</b><br>
+          <span id="lifeDays">≈ 9 days</span> of protection left<br>
+          at your commute profile.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== MID CTA ============== -->
+<section class="section-pad wrap midcta" data-screen-label="Reserve (mid)">
+  <h2 class="h2 reveal">Like what you see? It's free to reserve.</h2>
+  <p class="lede reveal">No product yet, no payment today — just tell us you'd want one. That's the signal that gets it built.</p>
+  <div class="midcta-actions reveal">
+    <a class="btn btn-primary" href="#preorder"><span data-cta>Pre-order</span> — it's free <span class="arrow">→</span></a>
+    <a class="btn btn-ghost" href="#faq">Read the FAQ</a>
+  </div>
+</section>
+
+<!-- ============== TIERS ============== -->
+<section class="deep section-pad" id="tiers" data-screen-label="Tiers">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="eyebrow">The tiered exposure model</p>
+      <h2 class="h2">Protection that matches your exposure.</h2>
+      <p class="lede">Most filters are sold as one undifferentiated commodity. <span data-brand>Numa</span> is built around <em>your</em> exposure profile — how long you've been breathing this air, and how long you'll keep doing it. The longer the exposure, the more protection earns its place.</p>
+    </div>
+
+    <div class="tier-tabs reveal" id="tierTabs">
+      <button class="tier-tab on" data-tier="0">
+        <div class="tn">TIER 1</div><div class="tt">Visitor</div><div class="tdur">Under 6 months</div>
+      </button>
+      <button class="tier-tab" data-tier="1">
+        <span class="pop">Most popular</span>
+        <div class="tn">TIER 2</div><div class="tt">Resident</div><div class="tdur">6 months – 2 years</div>
+      </button>
+      <button class="tier-tab" data-tier="2">
+        <div class="tn">TIER 3</div><div class="tt">Long-term</div><div class="tdur">2 – 5 years</div>
+      </button>
+      <button class="tier-tab" data-tier="3">
+        <div class="tn">TIER 4</div><div class="tt">Lifer</div><div class="tdur">5+ years</div>
+      </button>
+    </div>
+    <p class="tier-guide reveal">Not sure which? <b>Most people start at Resident.</b> You can move up a tier anytime — the device and app carry over.</p>
+
+    <div class="tier-panel reveal" style="--bg:var(--card)">
+      <div class="tier-body">
+        <div class="tlabel" id="tierLabel">Tier 1 · Short-term visitor</div>
+        <h3 class="h3" id="tierName">Light, simple, ready out of the box.</h3>
+        <p class="tfor" id="tierFor">For tourists and short-stay visitors. Basic, effective filtration in a lightweight body — protection for the weeks you're here.</p>
+        <div class="tier-specs" id="tierSpecs"></div>
+      </div>
+      <div class="tier-angle">
+        <div class="q" id="tierQ">"I'm only here a few weeks — but the air still matters."</div>
+        <div class="qd" id="tierQd">Positioned on acute exposure: even short stints underground spike fine-particle intake.</div>
+        <div class="price-chip" id="tierPrice">Entry price · single-use filters</div>
+      </div>
+    </div>
+    <p class="tier-pricing-note reveal">Planned founding pricing · locked in for early reservations · final pricing confirmed before launch</p>
+  </div>
+</section>
+
+<!-- ============== APP TEASER ============== -->
+<section class="deep section-pad" id="app" style="background:var(--bg-deep-2)" data-screen-label="Companion app">
+  <div class="wrap">
+    <div class="app-grid">
+      <div class="reveal">
+        <p class="eyebrow">Tier 4 · Companion app</p>
+        <h2 class="h2">Know exactly what you're breathing.</h2>
+        <p class="lede">The top tier adds in-device air-quality sensing that pairs with your phone — turning an invisible, distant risk into something you can actually see and act on.</p>
+        <ul class="app-list">
+          <li><span class="tick"></span><span><b>Live PM2.5</b> on your line, station by station.</span></li>
+          <li><span class="tick"></span><span><b>Exposure tracking</b> — cumulative particles filtered, day over day.</span></li>
+          <li><span class="tick"></span><span><b>Filter life</b> synced to your real commute, with refills timed automatically.</span></li>
+        </ul>
+        <p class="app-note">CONCEPT PREVIEW — SENSING + APP ARE THE TIER 4 ROADMAP</p>
+      </div>
+
+      <div class="reveal">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="ps-top"><span data-brand>NUMA</span><span>9:41</span></div>
+            <div class="pnow">
+              <div class="lab">Air right now · 14th St – Union Sq</div>
+              <div class="num"><b>132</b><span class="unit"> µg/m³</span></div>
+              <div class="lab" style="margin-top:6px;color:var(--accent)">Numa is filtering · breathe easy</div>
+            </div>
+            <div class="spark" id="spark"></div>
+            <div class="pexp">
+              <span class="pl">Filtered today</span>
+              <span class="pv">2.1M particles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SCIENCE ============== -->
+<section class="section-pad wrap" id="science" data-screen-label="Science">
+  <div class="shead reveal">
+    <p class="eyebrow">The evidence</p>
+    <h2 class="h2">Not a hunch. A documented health problem.</h2>
+    <p class="lede">Peer-reviewed research from credible institutions confirms subway air quality is a real, measurable public-health concern — not an anecdote.</p>
+  </div>
+
+  <div class="sci-grid">
+    <div class="sci-card reveal">
+      <div class="stat">139<span> µg/m³</span></div>
+      <p>Mean PM2.5 measured on NYC subway platforms — versus 99 on trains. Roughly 9× the WHO daily limit.</p>
+      <div class="src">Luglio et al., Environ. Health Perspectives, 2021 — NYU Langone</div>
+    </div>
+    <div class="sci-card reveal">
+      <div class="stat">~10×</div>
+      <p>PM2.5 in London &amp; Stockholm subways runs about ten times higher than the ambient air above ground.</p>
+      <div class="src">Multiple studies referenced in NYC subway research</div>
+    </div>
+    <div class="sci-card reveal">
+      <div class="stat">40<span>%</span></div>
+      <p>Long-distance commuters are 25% of riders but bear 40% of the total health burden — exposure compounds with time.</p>
+      <div class="src">ScienceDirect, Beijing exposure-inequality study, 2024</div>
+    </div>
+  </div>
+
+  <div class="inst reveal">
+    <span class="mono-label">Documented by</span>
+    <span class="org">NYU Langone</span>
+    <span class="org">Imperial College London</span>
+    <span class="org">Environmental Health Perspectives</span>
+    <span class="org">Environmental Science: Processes &amp; Impacts</span>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="section-pad wrap" id="faq" data-screen-label="FAQ">
+  <div class="shead reveal">
+    <p class="eyebrow">Questions, answered</p>
+    <h2 class="h2">Everything you're probably wondering.</h2>
+  </div>
+  <div class="faq-list reveal">
+    <details class="faq-item"><summary>Does it make breathing harder?<span class="fq-ic"></span></summary><div class="faq-answer">No. <span data-brand>Numa</span> is engineered for low airflow resistance, so a 30–60 minute commute feels effortless — not like breathing through a straw.</div></details>
+    <details class="faq-item"><summary>What if I breathe through my mouth?<span class="fq-ic"></span></summary><div class="faq-answer">Numa filters the air coming through your nose, which is how most people breathe at rest. If you tend to mouth-breathe, think of it as strong protection for the majority of your breaths rather than a fully sealed system.</div></details>
+    <details class="faq-item"><summary>Will it fall out when I talk, sneeze, or run for the train?<span class="fq-ic"></span></summary><div class="faq-answer">The soft silicone seal comes in three sizes so it stays gently seated through everyday movement. The low-profile retrieval bridge is there so you can take it out when you mean to — not by accident.</div></details>
+    <details class="faq-item"><summary>Is it comfortable for a full commute?<span class="fq-ic"></span></summary><div class="faq-answer">That's the whole design goal. Numa is shaped around the nostril's pressure points — no contact with the sensitive septum, pressure spread evenly — to stay comfortable well past the 10–15 minutes most nasal filters give up at.</div></details>
+    <details class="faq-item"><summary>How do I keep it clean, and how often do I replace the filter?<span class="fq-ic"></span></summary><div class="faq-answer">The shell wipes clean and is reusable. The filter cartridge pops out and is replaced on a cadence matched to how much you commute — your subscription ships fresh ones automatically, so you never have to guess.</div></details>
+    <details class="faq-item"><summary>Is it safe? What's it made of?<span class="fq-ic"></span></summary><div class="faq-answer">The only part that touches you is soft, medical-grade silicone — hypoallergenic and latex-free. It's drug-free and non-invasive: a physical filter, nothing more.</div></details>
+    <details class="faq-item"><summary>Does it actually help with asthma or allergies?<span class="fq-ic"></span></summary><div class="faq-answer">Numa is built first for people with asthma and allergies — it reduces the fine particles and irritants you breathe in underground. It isn't a medical device or a treatment, so keep following your doctor's guidance for your condition.</div></details>
+    <details class="faq-item"><summary>There's no product yet — so what am I paying?<span class="fq-ic"></span></summary><div class="faq-answer">Nothing today. Reserving is free with no card. It tells us whether to build <span data-brand>Numa</span>, and if enough people raise their hand, you get founding-member pricing and the first units off the line.</div></details>
+  </div>
+</section>
+
+<!-- ============== PRE-ORDER ============== -->
+<section class="deep section-pad" id="preorder" style="background:var(--bg-deep)" data-screen-label="Pre-order">
+  <div class="wrap">
+    <div class="pre-grid">
+      <div class="pre-left reveal">
+        <p class="eyebrow">Pre-order · Founding run</p>
+        <h2 class="h2" style="margin-top:16px;">Be first. And help decide if this gets built.</h2>
+        <p class="lede" style="margin-top:18px;max-width:46ch;">No product exists yet — your reservation is the signal that tells us to build it. It takes ten seconds, costs <b style="color:var(--on-deep)">$0 today</b>, and there's no card. Hit our number and you get the first units off the line at founding-member pricing.</p>
+
+        <div class="perks">
+          <div class="perk"><span class="pk">✓</span><span><b>Founding price locked — from $29.</b> The lowest price we'll ever offer, about 40% below planned launch retail.</span></div>
+          <div class="perk"><span class="pk">✓</span><span><b>First batch, first.</b> Founding reservations ship before general release.</span></div>
+          <div class="perk"><span class="pk">✓</span><span><b>A real say.</b> Vote on the final fit, finish, and name before tooling is locked.</span></div>
+        </div>
+
+        <div class="steps">
+          <div class="step"><span class="si">01</span><span class="sx"><b>Reserve your spot</b> — free, no card, ten seconds.</span></div>
+          <div class="step"><span class="si">02</span><span class="sx"><b>We build when enough of you do</b> — your reservation is a vote with weight.</span></div>
+          <div class="step"><span class="si">03</span><span class="sx"><b>You pre-order first</b>, at founder pricing, when production is greenlit.</span></div>
+        </div>
+        <p class="pre-reassure">$0 TODAY · NO CARD · UNSUBSCRIBE ANYTIME · WE NEVER SELL YOUR DATA</p>
+      </div>
+
+      <div class="pre-right reveal">
+        <div class="pre-card">
+          <!-- form state -->
+          <div id="preFormState">
+            <div class="pc-top">
+              <h3>Reserve your spot</h3>
+              <span class="counter"><span class="cdot"></span><span id="preCount">247</span> reserved</span>
+            </div>
+            <form class="pre-form" id="preForm" novalidate>
+              <div class="pf-row">
+                <label class="pf-label" for="pf-email">Email <span style="color:var(--accent-ink)">*</span></label>
+                <input class="pf-input" type="email" id="pf-email" name="email" placeholder="you@email.com" autocomplete="email" required />
+              </div>
+              <div class="pre-row-2">
+                <div class="pf-row">
+                  <label class="pf-label" for="pf-name">First name</label>
+                  <input class="pf-input" type="text" id="pf-name" name="name" placeholder="Optional" autocomplete="given-name" />
+                </div>
+                <div class="pf-row">
+                  <label class="pf-label" for="pf-tier">I'd want</label>
+                  <select class="pf-input" id="pf-tier" name="tier">
+                    <option value="Not sure yet">Not sure yet</option>
+                    <option value="Tier 1 · Visitor">Tier 1 · Visitor</option>
+                    <option value="Tier 2 · Resident" selected>Tier 2 · Resident</option>
+                    <option value="Tier 3 · Long-term">Tier 3 · Long-term</option>
+                    <option value="Tier 4 · Lifer">Tier 4 · Lifer</option>
+                  </select>
+                </div>
+              </div>
+              <div class="pf-error" id="pfError"></div>
+              <button class="btn btn-primary pre-submit" type="submit">Reserve my spot — free</button>
+              <p class="pf-fine">No payment today. We'll email you only about <span data-brand>Numa</span>'s progress and your founding pre-order window.</p>
+            </form>
+          </div>
+
+          <!-- success state -->
+          <div id="preSuccessState" class="pre-success hidden">
+            <div class="pcheck">✓</div>
+            <h3>You're on the founding list.</h3>
+            <p class="pos">You're reservation <b id="prePos">#248</b>.</p>
+            <p class="pos" style="font-size:14.5px;margin-top:14px;">We'll be in touch the moment founding pre-orders open. Thank you for helping decide if this gets built.</p>
+            <div class="psecondary">
+              Want to go deeper? <a href="#top" id="joinStudy">Join a 30-min research call</a> — $20 thank-you, fully confidential.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer class="foot wrap">
+  <div class="foot-inner">
+    <div>
+      <a class="brand" href="#top"><span class="brand-mark"></span><span data-brand>Numa</span></a>
+      <p class="disc" style="margin-top:14px;"><b>Concept prototype.</b> <span data-brand>Numa</span> is a working name and the product is in the customer-discovery phase — no device is for sale yet. Pre-orders are free, no-obligation reservations used to gauge interest; no payment is taken. Figures are drawn from published peer-reviewed research; product specifics, tiers, and pricing are concepts to be validated.</p>
+    </div>
+    <div class="foot-links">
+      <a href="#how">How it works</a>
+      <a href="#tiers">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#preorder">Pre-order</a>
+    </div>
+  </div>
+  <div class="foot-legal">
+    <span>© 2026 <span data-brand>Numa</span> · A concept in development. Pre-order reservations are free and non-binding — no payment is collected, and we'll only email you about <span data-brand>Numa</span>. Research figures are from published peer-reviewed studies; product specs, performance, and pricing are targets to be validated.</span>
+    <span class="foot-legal-links"><a href="#">Privacy</a><a href="#">Terms</a></span>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-inner">
+    <div class="st-l"><b>Reserve your spot — it's free.</b><small>$0 today · no card · founding pricing if we build it</small></div>
+    <a class="btn btn-primary" href="#preorder"><span data-cta>Pre-order</span> <span class="arrow">→</span></a>
+  </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

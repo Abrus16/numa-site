@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Numa — Clean air for your underground commute</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" rx="20" fill="#0e6a74"/>
+    <ellipse cx="50" cy="34" rx="15" ry="6" fill="#7fe3ec"/>
+    <rect x="35" y="34" width="30" height="40" rx="15" fill="#e7c9a8"/>
+  </svg>
+</template>
+
+<!-- ============== NAV ============== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top"><span class="brand-mark"></span><span data-brand>Numa</span></a>
+    <div class="nav-links">
+      <a href="#problem">The problem</a>
+      <a href="#science">The evidence</a>
+      <a href="#how">What we're building</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#preorder" data-cta>Reserve</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ============== HERO ============== -->
+<section class="hero wrap" data-screen-label="Hero">
+  <div class="hero-center reveal">
+    <p class="eyebrow">The air we breathe underground</p>
+    <h1 class="display" data-headline>Subway air is full of pollution.<br><span class="accentword">Numa filters it — every breath.</span></h1>
+    <p class="lede">Subway air is thick with fine-particle pollution you can't see — and it's linked to real harm to your lungs. Here's what you're actually breathing underground.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#problem">See the evidence</a>
+    </div>
+  </div>
+
+  <div class="hero-stage reveal">
+    <div class="trust-bar reveal">
+      <p>Grounded in peer-reviewed research — <b>NYU Langone</b> · <b>Imperial College London</b> · <b>WHO air-quality guidelines</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WHO IT'S FOR ============== -->
+<div class="aud-band">
+  <div class="aud-inner reveal">
+    <span class="al">Built first for</span>
+    <span class="aud-chip"><b>Asthma riders</b></span>
+    <span class="aud-chip"><b>Allergy sufferers</b></span>
+    <span class="aud-chip">Daily subway commuters</span>
+    <span class="aud-chip">— then cleaner air for everyone, everywhere</span>
+  </div>
+</div>
+
+<!-- ============== PROBLEM ============== -->
+<section class="deep section-pad" id="problem" data-screen-label="The problem">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="eyebrow">The invisible commute</p>
+      <h2 class="h2">When the train's headlights cut through the tunnel, you see it: a fog of suspended particles. You've been breathing it the whole time.</h2>
+      <p class="lede">Subway air is loaded with fine particulate matter — brake dust, rail wear, and debris — at levels that dwarf the air above ground. It's invisible, it's chronic, and right now most commuters just live with it.</p>
+    </div>
+
+    <div class="health reveal">
+      <p class="health-h">What that air does to your body</p>
+      <div class="health-grid">
+        <div class="hcard"><div class="hk">It gets deep inside</div><p>At under 2.5 microns, these particles slip past your airways' defenses — deep into the lungs, and into the bloodstream.</p></div>
+        <div class="hcard"><div class="hk">It triggers attacks</div><p>Short-term spikes are linked to asthma and allergy flare-ups, airway inflammation, and reduced lung function.</p></div>
+        <div class="hcard"><div class="hk">It strains the heart</div><p>Fine-particle exposure is tied to cardiovascular stress — a measurable drop in heart-rate variability after a single subway trip.</p></div>
+        <div class="hcard"><div class="hk">It adds up for life</div><p>Long-term PM2.5 exposure raises the risk of chronic respiratory and cardiovascular disease. The dose compounds over years.</p></div>
+      </div>
+      <p class="cite">Environmental Science &amp; Technology (PM2.5 health effects) · Harvard Six Cities Study · WHO air-quality guidelines · NYU Langone subway-exposure pilot study</p>
+    </div>
+
+    <div class="expo reveal" id="expo">
+      <div class="expo-head">
+        <div class="expo-lab">See it for your city<span>Underground PM2.5, from peer-reviewed measurements</span></div>
+        <select id="expoCity" class="expo-select" aria-label="Choose a subway system"></select>
+      </div>
+      <div class="bars" style="margin-top:28px;">
+        <div class="bar-row">
+          <div class="name">WHO 24-hour limit<small>safe exposure ceiling</small></div>
+          <div class="bar-track"><div class="bar-fill who" id="expoWho"></div></div>
+          <div class="val"><b>15</b> <small>µg/m³</small></div>
+        </div>
+        <div class="bar-row">
+          <div class="name" id="expoName">New York City<small id="expoSub">Underground platform mean</small></div>
+          <div class="bar-track"><div class="bar-fill plat" id="expoFill"></div></div>
+          <div class="val"><b id="expoVal">139</b> <small>µg/m³</small></div>
+        </div>
+      </div>
+      <div class="expo-readout">
+        <div class="expo-mult"><b id="expoMult">9×</b> the WHO safe limit</div>
+        <div class="expo-src" id="expoSrc">PLOS One, 2024 · NYU Langone data</div>
+      </div>
+    </div>
+
+    <div class="chem-note reveal">
+      <span class="dot"></span>
+      <p>This isn't ordinary city dust. Subway PM2.5 is <b>chemically distinct</b> — high in iron oxide from brake and rail wear, plus elemental carbon — raising concerns beyond standard particulate exposure. And transit ventilation is <b>"often inefficient"</b> at removing it, which is exactly why personal protection matters.</p>
+    </div>
+    <p class="cite reveal">Luglio et&nbsp;al., Environmental Health Perspectives 2021 (NYU Langone) · Env. Science: Processes &amp; Impacts, review of 130+ studies, 2021</p>
+
+    <div class="jtbd reveal">
+      <p class="jt-h">The job to be done — and why today's options fail</p>
+      <div class="jtbd-grid">
+        <div class="jt-card">
+          <div class="jw">Do nothing</div>
+          <div class="jx">The default for the vast majority of riders. The exposure is invisible, so it's easy to ignore — until years of it add up.</div>
+          <div class="jfail">No protection at all</div>
+        </div>
+        <div class="jt-card">
+          <div class="jw">Wear a mask</div>
+          <div class="jx">N95s work, but nobody wants to wear one daily post-COVID. Hot, conspicuous, uncomfortable for a 45-minute ride.</div>
+          <div class="jfail">Abandoned for comfort &amp; looks</div>
+        </div>
+        <div class="jt-card">
+          <div class="jw">Hold your breath</div>
+          <div class="jx">Dodging the worst of it on the platform, switching cars, taking shallow breaths. A coping reflex, not a solution.</div>
+          <div class="jfail">Doesn't actually work</div>
+        </div>
+      </div>
+      <p class="jt-foot">The job: <b>protect my lungs on the commute I take anyway — without a mask, without effort, without anyone noticing.</b> That's the gap Numa fills.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOW IT WORKS ============== -->
+<section class="section-pad wrap" id="how" data-screen-label="How it works">
+  <div class="shead reveal">
+    <p class="eyebrow">What we're building</p>
+    <h2 class="h2">Awareness is step one. This is step two.</h2>
+    <p class="lede">Knowing about the air isn't enough — you need a way to do something about it. So we're building <span data-brand>Numa</span>: a discreet nasal device that filters the air you actually breathe. No mask, no effort. Designed to clean any air for anyone, and built first for subway riders with asthma and allergies.</p>
+  </div>
+
+  <div class="pillars reveal">
+    <div class="pillar">
+      <div class="n">01</div>
+      <h3 class="h3">Breathe naturally</h3>
+      <p>Engineered for low airflow resistance, so a 30–60 minute commute feels effortless — not like breathing through a straw.</p>
+    </div>
+    <div class="pillar">
+      <div class="n">02</div>
+      <h3 class="h3">Practically invisible</h3>
+      <p>A discreet in-nose insert, not a face mask. Socially weightless — wear it on a packed platform, nobody notices.</p>
+    </div>
+    <div class="pillar">
+      <div class="n">03</div>
+      <h3 class="h3">Layered protection</h3>
+      <p>Multiple filter layers capture coarse debris, fine PM2.5, and odor — then pop out and swap when spent.</p>
+    </div>
+  </div>
+
+  <div class="perf-band reveal">
+    <div class="pnum">95<small>%</small></div>
+    <div>
+      <div class="ptext">Engineered to capture up to <b>95% of PM2.5</b> — the fine iron-oxide and carbon particles that dominate subway air.</div>
+      <div class="pcaveat">Target performance · in development · independently lab-tested before launch</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============== MID CTA ============== -->
+<section class="section-pad wrap midcta" data-screen-label="Reserve (mid)">
+  <h2 class="h2 reveal">Like what you see? It's free to reserve.</h2>
+  <p class="lede reveal">No product yet, no payment today — just tell us you'd want one. That's the signal that gets it built.</p>
+  <div class="midcta-actions reveal">
+    <a class="btn btn-primary" href="#preorder"><span data-cta>Reserve your product</span> — it's free <span class="arrow">→</span></a>
+    <a class="btn btn-ghost" href="#faq">Read the FAQ</a>
+  </div>
+</section>
+
+<!-- ============== SCIENCE ============== -->
+<section class="section-pad wrap" id="science" data-screen-label="Science">
+  <div class="shead reveal">
+    <p class="eyebrow">The evidence</p>
+    <h2 class="h2">Not a hunch. A documented health problem.</h2>
+    <p class="lede">Peer-reviewed research from credible institutions confirms subway air quality is a real, measurable public-health concern — not an anecdote.</p>
+  </div>
+
+  <div class="sci-grid">
+    <div class="sci-card reveal">
+      <div class="stat">139<span> µg/m³</span></div>
+      <p>Mean PM2.5 measured on NYC subway platforms — versus 99 on trains. Roughly 9× the WHO daily limit.</p>
+      <div class="src">Luglio et al., Environ. Health Perspectives, 2021 — NYU Langone</div>
+    </div>
+    <div class="sci-card reveal">
+      <div class="stat">~10×</div>
+      <p>PM2.5 in London &amp; Stockholm subways runs about ten times higher than the ambient air above ground.</p>
+      <div class="src">Multiple studies referenced in NYC subway research</div>
+    </div>
+    <div class="sci-card reveal">
+      <div class="stat">40<span>%</span></div>
+      <p>Long-distance commuters are 25% of riders but bear 40% of the total health burden — exposure compounds with time.</p>
+      <div class="src">ScienceDirect, Beijing exposure-inequality study, 2024</div>
+    </div>
+  </div>
+
+  <div class="inst reveal">
+    <span class="mono-label">Documented by</span>
+    <span class="org">NYU Langone</span>
+    <span class="org">Imperial College London</span>
+    <span class="org">Environmental Health Perspectives</span>
+    <span class="org">Environmental Science: Processes &amp; Impacts</span>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="section-pad wrap" id="faq" data-screen-label="FAQ">
+  <div class="shead reveal">
+    <p class="eyebrow">Questions, answered</p>
+    <h2 class="h2">Everything you're probably wondering.</h2>
+  </div>
+  <div class="faq-list reveal">
+    <details class="faq-item"><summary>Does it make breathing harder?<span class="fq-ic"></span></summary><div class="faq-answer">No. <span data-brand>Numa</span> is engineered for low airflow resistance, so a 30–60 minute commute feels effortless — not like breathing through a straw.</div></details>
+    <details class="faq-item"><summary>What if I breathe through my mouth?<span class="fq-ic"></span></summary><div class="faq-answer">Numa filters the air coming through your nose, which is how most people breathe at rest. If you tend to mouth-breathe, think of it as strong protection for the majority of your breaths rather than a fully sealed system.</div></details>
+    <details class="faq-item"><summary>Will it fall out when I talk, sneeze, or run for the train?<span class="fq-ic"></span></summary><div class="faq-answer">The soft silicone seal comes in three sizes so it stays gently seated through everyday movement. The low-profile retrieval bridge is there so you can take it out when you mean to — not by accident.</div></details>
+    <details class="faq-item"><summary>Is it comfortable for a full commute?<span class="fq-ic"></span></summary><div class="faq-answer">That's the whole design goal. Numa is shaped around the nostril's pressure points — no contact with the sensitive septum, pressure spread evenly — to stay comfortable well past the 10–15 minutes most nasal filters give up at.</div></details>
+    <details class="faq-item"><summary>How do I keep it clean, and how often do I replace the filter?<span class="fq-ic"></span></summary><div class="faq-answer">The shell wipes clean and is reusable. The filter cartridge pops out and is replaced on a cadence matched to how much you commute — your subscription ships fresh ones automatically, so you never have to guess.</div></details>
+    <details class="faq-item"><summary>Is it safe? What's it made of?<span class="fq-ic"></span></summary><div class="faq-answer">The only part that touches you is soft, medical-grade silicone — hypoallergenic and latex-free. It's drug-free and non-invasive: a physical filter, nothing more.</div></details>
+    <details class="faq-item"><summary>Does it actually help with asthma or allergies?<span class="fq-ic"></span></summary><div class="faq-answer">Numa is built first for people with asthma and allergies — it reduces the fine particles and irritants you breathe in underground. It isn't a medical device or a treatment, so keep following your doctor's guidance for your condition.</div></details>
+    <details class="faq-item"><summary>There's no product yet — so what am I paying?<span class="fq-ic"></span></summary><div class="faq-answer">Nothing today. Reserving is free with no card. It tells us whether to build <span data-brand>Numa</span>, and if enough people raise their hand, you get founding-member pricing and the first units off the line.</div></details>
+  </div>
+</section>
+
+<!-- ============== PRE-ORDER ============== -->
+<section class="deep section-pad" id="preorder" style="background:var(--bg-deep)" data-screen-label="Pre-order">
+  <div class="wrap">
+    <div class="pre-grid">
+      <div class="pre-left reveal">
+        <p class="eyebrow">Reserve · Founding run</p>
+        <h2 class="h2" style="margin-top:16px;">Be first. And help decide if this gets built.</h2>
+        <p class="lede" style="margin-top:18px;max-width:46ch;">No product exists yet — your reservation is the signal that tells us to build it. It takes ten seconds, costs <b style="color:var(--on-deep)">$0 today</b>, and there's no card. Hit our number and you get the first units off the line at founding-member pricing.</p>
+
+        <div class="perks">
+          <div class="perk"><span class="pk">✓</span><span><b>Founding-member status.</b> First access and the best terms we'll ever offer, reserved for early supporters.</span></div>
+          <div class="perk"><span class="pk">✓</span><span><b>First batch, first.</b> Founding reservations ship before general release.</span></div>
+          <div class="perk"><span class="pk">✓</span><span><b>A real say.</b> Vote on the final fit, finish, and name before tooling is locked.</span></div>
+        </div>
+
+        <div class="steps">
+          <div class="step"><span class="si">01</span><span class="sx"><b>Reserve your spot</b> — free, no card, ten seconds.</span></div>
+          <div class="step"><span class="si">02</span><span class="sx"><b>We build when enough of you do</b> — your reservation is a vote with weight.</span></div>
+          <div class="step"><span class="si">03</span><span class="sx"><b>You reserve first</b>, ahead of general release, when production is greenlit.</span></div>
+        </div>
+        <p class="pre-reassure">$0 TODAY · NO CARD · UNSUBSCRIBE ANYTIME · WE NEVER SELL YOUR DATA</p>
+      </div>
+
+      <div class="pre-right reveal">
+        <div class="pre-card">
+          <!-- form state -->
+          <div id="preFormState">
+            <div class="pc-top">
+              <h3>Reserve your spot</h3>
+              <span class="counter"><span class="cdot"></span><span id="preCount">247</span> reserved</span>
+            </div>
+            <form class="pre-form" id="preForm" novalidate>
+              <div class="pf-row">
+                <label class="pf-label" for="pf-email">Email <span style="color:var(--accent-ink)">*</span></label>
+                <input class="pf-input" type="email" id="pf-email" name="email" placeholder="you@email.com" autocomplete="email" required />
+              </div>
+              <div class="pre-row-2">
+                <div class="pf-row">
+                  <label class="pf-label" for="pf-name">First name</label>
+                  <input class="pf-input" type="text" id="pf-name" name="name" placeholder="Optional" autocomplete="given-name" />
+                </div>
+                <div class="pf-row">
+                  <label class="pf-label" for="pf-tier">I'd want</label>
+                  <select class="pf-input" id="pf-tier" name="tier">
+                    <option value="Not sure yet">Not sure yet</option>
+                    <option value="Tier 1 · Visitor">Tier 1 · Visitor</option>
+                    <option value="Tier 2 · Resident" selected>Tier 2 · Resident</option>
+                    <option value="Tier 3 · Long-term">Tier 3 · Long-term</option>
+                    <option value="Tier 4 · Lifer">Tier 4 · Lifer</option>
+                  </select>
+                </div>
+              </div>
+              <div class="pf-error" id="pfError"></div>
+              <button class="btn btn-primary pre-submit" type="submit">Reserve my spot — free</button>
+              <p class="pf-fine">No payment today. We'll email you only about <span data-brand>Numa</span>'s progress and your founding reservation window.</p>
+            </form>
+          </div>
+
+          <!-- success state -->
+          <div id="preSuccessState" class="pre-success hidden">
+            <div class="pcheck">✓</div>
+            <h3>You're on the founding list.</h3>
+            <p class="pos">You're reservation <b id="prePos">#248</b>.</p>
+            <p class="pos" style="font-size:14.5px;margin-top:14px;">We'll be in touch the moment founding reservations open. Thank you for helping decide if this gets built.</p>
+            <div class="psecondary">
+              Want to go deeper? <a href="#top" id="joinStudy">Join a 30-min research call</a> — $20 thank-you, fully confidential.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer class="foot wrap">
+  <div class="foot-inner">
+    <div>
+      <a class="brand" href="#top"><span class="brand-mark"></span><span data-brand>Numa</span></a>
+      <p class="disc" style="margin-top:14px;"><b>Concept prototype.</b> <span data-brand>Numa</span> is a working name and the product is in the customer-discovery phase — no device is for sale yet. Reservations are free, no-obligation, and used to gauge interest; no payment is taken. Figures are drawn from published peer-reviewed research; product specifics, tiers, and pricing are concepts to be validated.</p>
+    </div>
+    <div class="foot-links">
+      <a href="#problem">The problem</a>
+      <a href="#science">The evidence</a>
+      <a href="#faq">FAQ</a>
+      <a href="#preorder">Reserve</a>
+    </div>
+  </div>
+  <div class="foot-legal">
+    <span>© 2026 <span data-brand>Numa</span> · A concept in development. Reservations are free and non-binding — no payment is collected, and we'll only email you about <span data-brand>Numa</span>. Research figures are from published peer-reviewed studies; product specs, performance, and pricing are targets to be validated.</span>
+    <span class="foot-legal-links"><a href="#">Privacy</a><a href="#">Terms</a></span>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-inner">
+    <div class="st-l"><b>Reserve your product — it's free.</b><small>$0 today · no card · no obligation</small></div>
+    <a class="btn btn-primary" href="#preorder"><span data-cta>Reserve</span> <span class="arrow">→</span></a>
+  </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

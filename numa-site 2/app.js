@@ -81,6 +81,7 @@
   function plural(n, w) { return n + ' ' + w + (n === 1 ? '' : 's'); }
 
   function recompute() {
+    if (!mins) return;
     const m = +mins.value;
     if (minsVal) minsVal.textContent = m;
     const filterLifeCommuteDays = CAPACITY / m;             // commute days per filter
@@ -168,7 +169,7 @@
     tFor.textContent = t.forText;
     tQ.textContent = t.q;
     tQd.textContent = t.qd;
-    tPrice.textContent = t.price;
+    if (tPrice) tPrice.textContent = t.price;
     tSpecs.innerHTML = '';
     Object.entries(t.specs).forEach(([k, v]) => {
       const row = document.createElement('div');
@@ -379,4 +380,41 @@
     new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting; update(); }, { threshold: 0 }).observe(heroSection);
     new IntersectionObserver(([e]) => { nearPre = e.isIntersecting; update(); }, { rootMargin: '0px 0px -12% 0px' }).observe(preSection);
   }
+/* ---------- interactive exposure selector ---------- */
+  (function () {
+    const CITIES = [
+      { id: 'nyc', name: 'New York City', val: 139, sub: 'Underground platform mean', src: 'PLOS One, 2024 \u00b7 NYU Langone data' },
+      { id: 'london', name: 'London Underground', val: 88, sub: 'Tube network mean', src: 'King\u2019s College London, 2019' },
+      { id: 'londonvic', name: 'London \u2014 Victoria line', val: 361, sub: 'Deepest, most enclosed line', src: 'King\u2019s College London, 2019' },
+      { id: 'philly', name: 'Philadelphia', val: 120, sub: '15th St station mean', src: 'J. Exposure Sci. & Env. Epidemiology, 2024' },
+      { id: 'beijing', name: 'Beijing', val: 64, sub: 'Platform mean (52\u201375 range)', src: 'Int. J. Env. Research & Public Health, 2020' },
+      { id: 'suzhou', name: 'Suzhou, China', val: 142, sub: 'Underground platform mean', src: 'Cao et al., 2017' }
+    ];
+    const WHO = 15, SCALE = 380;
+    const sel = document.getElementById('expoCity');
+    const who = document.getElementById('expoWho');
+    const fill = document.getElementById('expoFill');
+    const nm = document.getElementById('expoName');
+    const sub = document.getElementById('expoSub');
+    const val = document.getElementById('expoVal');
+    const mult = document.getElementById('expoMult');
+    const src = document.getElementById('expoSrc');
+    if (!sel || !fill) return;
+    CITIES.forEach(function (c) { const o = document.createElement('option'); o.value = c.id; o.textContent = c.name; sel.appendChild(o); });
+    function pct(v) { return Math.min(100, v / SCALE * 100); }
+    function show(c) {
+      if (nm && nm.firstChild) nm.firstChild.textContent = c.name;
+      if (sub) sub.textContent = c.sub;
+      if (val) val.textContent = c.val;
+      if (src) src.textContent = c.src;
+      if (mult) mult.textContent = Math.round(c.val / WHO) + '\u00d7';
+      fill.style.width = pct(c.val) + '%';
+    }
+    if (who) who.style.width = pct(WHO) + '%';
+    sel.addEventListener('change', function () { const c = CITIES.find(function (x) { return x.id === sel.value; }) || CITIES[0]; show(c); });
+    const stage = sel.closest('.expo');
+    const io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { show(CITIES[0]); io.unobserve(e.target); } }); }, { threshold: 0.3 });
+    if (stage) io.observe(stage); else show(CITIES[0]);
+  })();
+
 })();

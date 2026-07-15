@@ -665,7 +665,7 @@ section { position: relative; }
 /* ---------- DEVICE / built for the nose ---------- */
 .device-anatomy {
   margin-top: 60px;
-  display: grid; grid-template-columns: 1fr 1.15fr 1fr; gap: clamp(20px,3vw,44px);
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px,5vw,64px);
   align-items: center;
 }
 .da-col { display: flex; flex-direction: column; gap: 30px; }
@@ -828,3 +828,33 @@ select.pf-input { appearance: none; cursor: pointer; background-image: linear-gr
   .reveal, .reveal.pre { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
 }
+
+
+/* ---------- health impact ---------- */
+.health { margin-top: 52px; }
+.health-h { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 20px; }
+.health-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--on-deep-line); border: 1px solid var(--on-deep-line); border-radius: 16px; overflow: hidden; }
+.hcard { background: var(--bg-deep-2); padding: 22px 22px 26px; }
+.hcard .hk { font-weight: 600; font-size: 15px; letter-spacing: -0.01em; color: var(--on-deep); }
+.hcard p { margin: 8px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--on-deep-soft); }
+.health .cite { margin-top: 18px; }
+@media (max-width: 860px){ .health-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px){ .health-grid { grid-template-columns: 1fr; } }
+
+/* ---------- interactive exposure selector ---------- */
+.expo { margin-top: 52px; max-width: 760px; }
+.expo-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.expo-lab { font-size: 15px; color: var(--on-deep); font-weight: 600; letter-spacing: -0.01em; }
+.expo-lab span { display: block; font-family: var(--mono); font-size: 12px; font-weight: 400; letter-spacing: 0.03em; color: var(--on-deep-soft); margin-top: 4px; }
+.expo-select {
+  font: inherit; font-size: 15px; font-weight: 500; color: var(--on-deep);
+  background-color: var(--bg-deep-2); border: 1px solid var(--on-deep-line); border-radius: 10px;
+  padding: 11px 40px 11px 15px; cursor: pointer; -webkit-appearance: none; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2315a3b0' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 15px center;
+}
+.expo-select:focus { outline: none; border-color: var(--accent); }
+.expo-readout { margin-top: 24px; display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.expo-mult { font-size: 17px; color: var(--on-deep); }
+.expo-mult b { font-size: 30px; font-weight: 600; letter-spacing: -0.03em; color: var(--accent); margin-right: 4px; }
+.expo-src { font-family: var(--mono); font-size: 11px; letter-spacing: 0.05em; color: var(--on-deep-soft); opacity: .75; margin-left: auto; }
